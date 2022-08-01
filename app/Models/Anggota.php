@@ -7,5 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Anggota extends Model
 {
-    use HasFactory;
+    protected $table = "anggota";
+    protected $primaryKey = "id";
+    protected $fillable = ['id', 'nama', 'alamat', 'email'];
 }
