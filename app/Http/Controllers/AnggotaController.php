@@ -26,7 +26,8 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        //
+        $model = new Anggota;
+        return view('addAnggota', compact('model'));
     }
 
     /**
@@ -37,7 +38,13 @@ class AnggotaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $model = new Anggota;
+        $model->nama = $request->nama;
+        $model->alamat = $request->alamat;
+        $model->email = $request->email;
+        $model->save();
+
+        return redirect('anggota');
     }
 
     /**

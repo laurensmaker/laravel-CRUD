@@ -18,4 +18,4 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::resource('/', AnggotaController::class);
+Route::resource('anggota', AnggotaController::class);

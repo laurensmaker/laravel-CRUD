@@ -13,7 +13,7 @@ class CreateAnggotasTable extends Migration
      */
     public function up()
     {
-        Schema::create('anggota', function (Blueprint $table) {
+        Schema::create('anggotas', function (Blueprint $table) {
             $table->id();
             $table->string('nama', 50);
             $table->string('alamat', 100);
@@ -29,6 +29,6 @@ class CreateAnggotasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('anggota');
+        Schema::dropIfExists('anggotas');
     }
 }

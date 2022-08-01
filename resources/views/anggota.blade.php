@@ -47,8 +47,8 @@
                         <p class="h3 fw-bold">Anggota</p>
                     </div>
                     <div class="col-2 ms-auto">
-                        <button type="button" class="btn btn-primary"><i
-                                class="bi bi-person-plus-fill"></i>Tambah</button>
+                        <a type="button" class="btn btn-primary" href="{{ url('anggota/create') }}"><i
+                                class="bi bi-person-plus-fill"></i>Tambah</a>
                     </div>
                 </div>
 
@@ -64,18 +64,20 @@
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($datas as $key=>$value)
                             <tr>
-                                <th scope="row">1</th>
-                                <td>Sulenias Asso</td>
-                                <td>Padang bulan, abe, kota Jayapura</td>
-                                <td>Aco@gmail.com</td>
+                                <th scope="row">{{ $value->id }}</th>
+                                <td>{{ $value->nama }}</td>
+                                <td>{{ $value->alamat }}</td>
+                                <td>{{ $value->email }}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn btn-outline-success btn-sm me-2">Detail</button>
                                     <button type="button" class="btn btn-outline-info btn-sm me-2">Edit</button>
                                     <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
                                 </td>
-                            </tr>
-                            <tr>
+                            </tr>                                
+                            @endforeach
+                            {{-- <tr>
                                 <th scope="row">2</th>
                                 <td>Delvi Wamu</td>
                                 <td>Padang bulan, abe, kota Jayapura</td>
@@ -85,7 +87,7 @@
                                     <button type="button" class="btn btn-outline-info btn-sm me-2">Edit</button>
                                     <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
                                 </td>
-                            </tr>                                                    
+                            </tr>                                                     --}}
                            
                         </tbody>
                     </table>
