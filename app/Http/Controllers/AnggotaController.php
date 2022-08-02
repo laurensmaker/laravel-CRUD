@@ -66,7 +66,8 @@ class AnggotaController extends Controller
      */
     public function edit($id)
     {
-        //
+        $model = Anggota::find($id);
+        return view('editAnggota', compact('model'));
     }
 
     /**
@@ -78,7 +79,13 @@ class AnggotaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $model = Anggota::find($id);
+        $model->nama = $request->nama;
+        $model->alamat = $request->alamat;
+        $model->email = $request->email;
+        $model->save();
+
+        return redirect('anggota');
     }
 
     /**

@@ -72,7 +72,7 @@
                                 <td>{{ $value->email }}</td>
                                 <td class="text-center">
                                     <button type="button" class="btn btn-outline-success btn-sm me-2">Detail</button>
-                                    <button type="button" class="btn btn-outline-info btn-sm me-2">Edit</button>
+                                    <a type="button" class="btn btn-outline-info btn-sm me-2" href="{{ url('anggota/'.$value->id.'/edit') }}">Edit</a>
                                     <button type="button" class="btn btn-outline-danger btn-sm">Hapus</button>
                                 </td>
                             </tr>                                
